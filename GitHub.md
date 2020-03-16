@@ -42,3 +42,6 @@ https://github.com/settings/ssh
 
 * git push の確認  
 > git push  
+
+---
+# Windows
