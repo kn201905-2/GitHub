@@ -44,4 +44,13 @@ https://github.com/settings/ssh
 > git push  
 
 ---
-# Windows
+# Windows で複数のアカウントを利用する場合
+
+* 新規フォルダにおいて、git clone を行うとき、以下のようにする
+
+```
+git clone https://github.com/user_a/aprojectX
+ ↓
+git clone https://user_a@github.com/user_a/aprojectX
+```
+
