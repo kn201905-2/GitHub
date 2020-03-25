@@ -44,7 +44,7 @@ https://github.com/settings/ssh
 > git push  
 
 ---
-# Windows で複数のアカウントを利用する場合
+# git clone でアカウントを設定する場合
 
 * 新規フォルダにおいて、git clone を行うとき、以下のようにする
 
