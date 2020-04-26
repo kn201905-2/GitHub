@@ -54,3 +54,15 @@ git clone https://github.com/user_a/aprojectX
 git clone https://user_a@github.com/user_a/aprojectX
 ```
 
+---
+# git config
+```
+# git config --list
+# git config --list --show-origin
+
+# git config --local user.name "John Doe"
+# git config --local user.email johndoe@example.com
+
+認証情報のキャッシュ
+# git config --local credential.helper 'cache --timeout=86400'
+```
