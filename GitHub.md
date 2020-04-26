@@ -29,7 +29,7 @@ git clone https://user_a@github.com/user_a/aprojectX
 ---
 # GitHub ssh接続  
 * ssh key の生成  
-> ssh-keygen -t rsa -C "temp2019@knmail.jpn.org" -f github  
+> ssh-keygen -t rsa -b 4096 -C "test@test.com" -f github  
 > ssh-keygen -l -f github.pub（生成された鍵の確認）  
 
 * 上記で -f でファイル名を指定している場合、\~/.ssh に config ファイルを作成する必要がある。  
