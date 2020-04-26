@@ -16,6 +16,17 @@ https://github.com/login
 ```
 
 ---
+# git clone でアカウントを設定する場合
+
+* 新規フォルダにおいて、git clone を行うとき、以下のようにする
+
+```
+git clone https://github.com/user_a/aprojectX
+ ↓
+git clone https://user_a@github.com/user_a/aprojectX
+```
+
+---
 # GitHub ssh接続  
 * ssh key の生成  
 > ssh-keygen -t rsa -C "temp2019@knmail.jpn.org" -f github  
@@ -42,17 +53,6 @@ https://github.com/settings/ssh
 
 * git push の確認  
 > git push  
-
----
-# git clone でアカウントを設定する場合
-
-* 新規フォルダにおいて、git clone を行うとき、以下のようにする
-
-```
-git clone https://github.com/user_a/aprojectX
- ↓
-git clone https://user_a@github.com/user_a/aprojectX
-```
 
 ---
 # git config
