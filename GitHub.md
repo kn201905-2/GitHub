@@ -27,22 +27,44 @@ git clone https://user_a@github.com/user_a/aprojectX
 ```
 
 ---
-# GitHub ssh接続  
-* ssh key の生成  
-> ssh-keygen -t rsa -b 4096 -C "test@test.com" -f github  
+# GitHub ssh接続
+```
+https://help.github.com/ja/github/authenticating-to-github/connecting-to-github-with-ssh
+```
 
->  vi ~/.ssh/config  
+* メールアドレスをラベルとして SSH キーを作成する
+```
+$ ssh-keygen -t rsa -b 4096 -C "test@test.com" -f github  
+```
 
-Host github github.com  
-　HostName github.com  
-　IdentityFile ~/.ssh/github  
-　User git  
+* ssh-agent をバックグラウンドで起動する
+```
+$ eval $(ssh-agent -s)
+```
 
-* 以下の URL より、GitHub に公開鍵を登録  
-https://github.com/settings/ssh  
+* SSH 秘密鍵を ssh-agent に追加する
+```
+$ ssh-add ~/.ssh/id_rsa
+```
 
-* 接続の確認  
-> ssh -T github  
+* クリップボードに SSH公開鍵をコピーする
+```
+$ clip < ~/.ssh/id_rsa.pub
+```
+
+* GitHub の HP で、Setting を表示し、左側のメニューの「SSH and GPG keys」をクリック
+```
+https://github.com/settings/profile
+```
+
+* 「New SSH key」をクリック  
+　Title は適宜設定し、Key に公開鍵をペーストする  
+　「Add SSH key」をクリックして、SSH 公開鍵の登録を終了
+
+* 接続の確認
+```
+$ ssh -T git@github.com
+```
 
 * 「~/.ssh/config」で設定を行っている場合、remote に登録が必要となる  
 > git remote set-url origin github:[ユーザ名]/[リポジトリ名]  
